@@ -3669,3 +3669,16 @@ a:not(.button):hover {
 .spr-icon-star-half-alt {
   color: var(--php-accent);
 }
+
+.php-hero-microcopy {
+  display: inline-block;
+  margin-top: 0.6rem;
+  opacity: 0.85;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+/* Hero reassurance strip */
+.section-rich-text .rte p {
+  margin: 0;
+}

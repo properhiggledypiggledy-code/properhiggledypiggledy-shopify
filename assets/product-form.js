@@ -140,3 +140,43 @@ if (!customElements.get('product-form')) {
     }
   );
 }
+
+/* PHP Sticky ATC (mobile) */
+document.addEventListener('DOMContentLoaded', function () {
+  const stickyBtn = document.querySelector('[data-php-sticky-trigger]');
+  const stickyPrice = document.querySelector('[data-php-sticky-price]');
+  const realBtn = document.querySelector('form[action="/cart/add"] button[type="submit"]');
+  const variantIdInput = document.querySelector('form[action="/cart/add"] input[name="id"]');
+
+  if (stickyBtn && realBtn) {
+    stickyBtn.addEventListener('click', function () {
+      realBtn.click();
+    });
+  }
+
+  // Update sticky bar when variant changes
+  document.addEventListener('variant:change', function (event) {
+    try {
+      const variant = event.detail.variant;
+      if (!variant) return;
+
+      if (stickyPrice) stickyPrice.textContent = variant.price ? Shopify.formatMoney(variant.price) : stickyPrice.textContent;
+
+      if (stickyBtn) {
+        if (variant.available) {
+          stickyBtn.disabled = false;
+          stickyBtn.textContent = 'Add to cart';
+        } else {
+          stickyBtn.disabled = true;
+          stickyBtn.textContent = 'Sold out';
+        }
+      }
+
+      // Keep the real form in sync (usually already is, but safe)
+      if (variantIdInput) variantIdInput.value = variant.id;
+    } catch (e) {
+      // No-op
+    }
+  });
+});
+/* End PHP Sticky ATC (mobile) */

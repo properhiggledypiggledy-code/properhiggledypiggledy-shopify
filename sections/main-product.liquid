@@ -140,6 +140,24 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {%- if block.type == 'price' -%}
+                  <div class="php-trust-row">
+                    <div class="php-trust-item">
+                      {{ 'icon-leaf.svg' | inline_asset_content }}
+                      <span>Handmade</span>
+                    </div>
+
+                    <div class="php-trust-item">
+                      {{ 'icon-truck.svg' | inline_asset_content }}
+                      <span>Quick dispatch</span>
+                    </div>
+
+                    <div class="php-trust-item">
+                      {{ 'icon-heart.svg' | inline_asset_content }}
+                      <span>Each piece unique</span>
+                    </div>
+                  </div>
+                {%- endif -%}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -737,6 +755,36 @@
     </script>
   </div>
 </product-info>
+
+<!-- PHP Sticky Add To Cart (Mobile) -->
+<div class="php-sticky-atc" id="php-sticky-atc">
+  <div class="php-sticky-inner page-width">
+
+    <div class="php-sticky-info">
+      <span class="php-sticky-title">{{ product.title }}</span>
+        <span class="php-sticky-price" data-php-sticky-price>
+          {{ product.selected_or_first_available_variant.price | money }}
+        </span>
+    </div>
+
+    <div class="php-sticky-button">
+      <button
+        type="button"
+        class="button button--primary php-sticky-trigger"
+        data-php-sticky-trigger
+        {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+      >
+        {% if product.selected_or_first_available_variant.available %}
+          Add to cart
+        {% else %}
+          Sold out
+        {% endif %}
+      </button>
+    </div>
+
+  </div>
+</div>
+
 
 {% schema %}
 {

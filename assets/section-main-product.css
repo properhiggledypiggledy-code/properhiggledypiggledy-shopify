@@ -1492,3 +1492,101 @@ a.product__text {
     border: none;
   }
 }
+
+/* Proper Higgledy Piggledy – Trust Row */
+
+.php-trust-row {
+  display: flex;
+  gap: 1.2rem;
+  margin: 1.2rem 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.php-trust-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  color: rgb(var(--color-foreground));
+  opacity: 0.85;
+}
+
+.php-trust-item .svg-wrapper {
+  display: inline-flex;
+}
+
+.php-trust-item svg {
+  width: 18px;
+  height: 18px;
+}
+
+.php-trust-item svg path {
+  fill: var(--php-primary);
+}
+
+
+/* ==============================
+   PHP Sticky Add To Cart (Mobile)
+============================== */
+
+.php-sticky-atc {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(var(--color-background));
+  border-top: 1px solid rgba(0,0,0,0.06);
+  z-index: 50;
+  display: none;
+}
+
+.php-sticky-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.php-sticky-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.php-sticky-title {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.php-sticky-price {
+  opacity: 0.75;
+}
+
+.php-sticky-button {
+  flex-shrink: 0;
+}
+
+.php-sticky-atc {
+  backdrop-filter: blur(8px);
+}
+
+.php-sticky-atc .button {
+  min-height: 44px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+
+/* Mobile only */
+@media screen and (max-width: 749px) {
+  .php-sticky-atc {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 80px;
+  }
+}
+

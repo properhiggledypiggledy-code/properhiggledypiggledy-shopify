@@ -9,62 +9,142 @@
  */
 {
   "sections": {
-    "image_banner": {
+    "hero_image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
+        "hero_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Self care, handmade, uniquely you",
             "heading_size": "h0"
           }
         },
-        "button": {
+        "hero_text": {
+          "type": "text",
+          "settings": {
+            "text": "Spa-girlie calm, with a playful handmade twist. Every piece is one of a kind, made with care, and dispatched fast.",
+            "text_style": "body"
+          }
+        },
+        "hero_buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label_1": "Shop Touchstone",
+            "button_link_1": "shopify://collections/touchstone",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Pebbo",
+            "button_link_2": "shopify://collections/pebbo",
+            "button_style_secondary_2": true
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "hero_heading",
+        "hero_text",
+        "hero_buttons"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "",
+        "image_2": "",
+        "image_overlay_opacity": 30,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
-    "featured_collection": {
+    "hero_reassurance": {
+      "type": "rich-text",
+      "blocks": {
+        "reassure_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Handmade, dispatched same day or next.</p>",
+            "text_style": "caption"
+          }
+        }
+      },
+      "block_order": [
+        "reassure_text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 8,
+        "padding_bottom": 16
+      }
+    },
+    "shop_by_mood": {
+      "type": "collection-list",
+      "blocks": {
+        "mood_1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "touchstone"
+          }
+        },
+        "mood_2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pebbo"
+          }
+        },
+        "mood_3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "mood_4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "Keyrings"
+          }
+        }
+      },
+      "block_order": [
+        "mood_1",
+        "mood_2",
+        "mood_3",
+        "mood_4"
+      ],
+      "settings": {
+        "title": "Shop by mood",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "swipe_on_mobile": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
+
+    "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "collection": "bestsellers",
+        "products_to_show": 8,
+        "title": "Bestsellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -72,13 +152,111 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
+        "swipe_on_mobile": true,
+        "padding_top": 24,
         "padding_bottom": 36
+      }
+    },
+
+    "how_its_made": {
+      "type": "image-with-text",
+      "blocks": {
+        "him_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "How it’s made",
+            "heading_size": "h1"
+          }
+        },
+        "him_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We hand-make each piece in small batches, with premium materials and careful finishing. The higgledy piggledy part, no two are ever the same, and that’s the point.</p>",
+            "text_style": "body"
+          }
+        },
+        "him_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/about",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "him_heading",
+        "him_text",
+        "him_button"
+      ],
+      "settings": {
+        "image": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+
+    "email_capture": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Get early access to new drops",
+        "subheading": "Be first to see new Touchstones, Pebbos, earrings and upcoming candles and soaps.",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+
+    "social_follow": {
+      "type": "rich-text",
+      "blocks": {
+        "social_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow along",
+            "heading_size": "h2"
+          }
+        },
+        "social_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Behind the scenes, new makes, packaging, and satisfying finishing videos.</p><p><a href=\"https://instagram.com/\" target=\"_blank\" rel=\"noopener\">Instagram</a> and <a href=\"https://tiktok.com/\" target=\"_blank\" rel=\"noopener\">TikTok</a></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "social_heading",
+        "social_text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 60
       }
     }
   },
+
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero_image_banner",
+    "hero_reassurance",
+    "shop_by_mood",
+    "bestsellers",
+    "how_its_made",
+    "email_capture",
+    "social_follow"
   ]
 }
