@@ -34,9 +34,16 @@ Add these repo secrets:
 
 - `SHOPIFY_STORE` = `your-store.myshopify.com`
 - `SHOPIFY_STORE` = `proper-higgledy-piggledy.myshopify.com`
-- `SHOPIFY_API_PASSWORD` = Theme Access password or Custom App Admin API access token
+- `SHOPIFY_API_PASSWORD` = (optional) Theme Access password or Admin API access token
+- `SHOPIFY_CLIENT_ID` = (optional) Dev Dashboard app client ID
+- `SHOPIFY_CLIENT_SECRET` = (optional) Dev Dashboard app client secret
 - `SHOPIFY_STAGING_THEME_ID` = numeric ID for staging theme
 - `SHOPIFY_LIVE_THEME_ID` = numeric ID for live theme
+
+Authentication priority:
+
+1. If `SHOPIFY_API_PASSWORD` (or legacy `SHOPIFY_CLI_THEME_TOKEN`) is set, workflows use it directly.
+2. Otherwise workflows request a short-lived access token from Shopify using `SHOPIFY_CLIENT_ID` + `SHOPIFY_CLIENT_SECRET`.
 
 Recommended protection:
 
