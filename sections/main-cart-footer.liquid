@@ -38,6 +38,33 @@
       {%- endif -%}
 
       <div class="cart__blocks">
+        {%- assign free_shipping_threshold_cents = settings.free_shipping_threshold | times: 100 -%}
+        {%- if free_shipping_threshold_cents > 0 -%}
+          {%- assign cart_total_cents = cart.total_price -%}
+          {%- assign free_shipping_remaining = free_shipping_threshold_cents | minus: cart_total_cents -%}
+          {%- assign free_shipping_progress = cart_total_cents | times: 100.0 | divided_by: free_shipping_threshold_cents -%}
+          {%- if free_shipping_progress > 100 -%}
+            {%- assign free_shipping_progress = 100 -%}
+          {%- endif -%}
+          <div class="cart-conversion-card">
+            {%- if free_shipping_remaining > 0 -%}
+              <p class="cart-conversion-card__title">
+                Add <strong>{{ free_shipping_remaining | money }}</strong> more for free shipping
+              </p>
+            {%- else -%}
+              <p class="cart-conversion-card__title">You have unlocked free shipping</p>
+            {%- endif -%}
+            <div class="cart-conversion-card__progress">
+              <span style="width: {{ free_shipping_progress }}%;"></span>
+            </div>
+            <ul class="cart-conversion-card__points list-unstyled">
+              <li>Secure checkout</li>
+              <li>Handmade and packed with care</li>
+              <li>Quick dispatch from our studio</li>
+            </ul>
+          </div>
+        {%- endif -%}
+
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}

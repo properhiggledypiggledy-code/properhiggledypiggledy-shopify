@@ -15,25 +15,25 @@
         "hero_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Self care, handmade, uniquely you",
+            "heading": "Handmade feel-good pieces for your everyday rituals",
             "heading_size": "h0"
           }
         },
         "hero_text": {
           "type": "text",
           "settings": {
-            "text": "Spa-girlie calm, with a playful handmade twist. Every piece is one of a kind, made with care, and dispatched fast.",
+            "text": "Thoughtful Touchstones, playful Pebbos, earrings and keyrings made in small batches. No mass production, just beautifully imperfect pieces packed with care.",
             "text_style": "body"
           }
         },
         "hero_buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Touchstone",
-            "button_link_1": "shopify://collections/touchstone",
+            "button_label_1": "Shop Bestsellers",
+            "button_link_1": "shopify://collections/bestsellers",
             "button_style_secondary_1": false,
-            "button_label_2": "Shop Pebbo",
-            "button_link_2": "shopify://collections/pebbo",
+            "button_label_2": "Explore Collections",
+            "button_link_2": "shopify://collections/all",
             "button_style_secondary_2": true
           }
         }
@@ -46,7 +46,7 @@
       "settings": {
         "image": "",
         "image_2": "",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -55,7 +55,7 @@
         "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "hero_reassurance": {
@@ -64,7 +64,7 @@
         "reassure_text": {
           "type": "text",
           "settings": {
-            "text": "<p>Handmade, dispatched same day or next.</p>",
+            "text": "<p>Handmade in small batches. Packed with care. Dispatched same or next day.</p>",
             "text_style": "caption"
           }
         }
@@ -76,9 +76,65 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 8,
-        "padding_bottom": 16
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "brand_values": {
+      "type": "multicolumn",
+      "blocks": {
+        "value_1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "One-of-a-kind finish",
+            "text": "<p>Every piece is handmade, so small differences are part of the charm.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value_2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Fast dispatch",
+            "text": "<p>Orders are usually packed and sent the same day or next working day.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value_3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Built for gifting",
+            "text": "<p>Designed to feel personal and joyful, whether for yourself or someone else.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "value_1",
+        "value_2",
+        "value_3"
+      ],
+      "settings": {
+        "title": "Why people love Proper Higgledy Piggledy",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "shop_by_mood": {
@@ -105,7 +161,7 @@
         "mood_4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "Keyrings"
+            "collection": "keyrings"
           }
         }
       },
@@ -124,17 +180,16 @@
         "show_view_all": false,
         "swipe_on_mobile": true,
         "columns_mobile": "2",
-        "padding_top": 36,
+        "padding_top": 24,
         "padding_bottom": 20
       }
     },
-
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
         "collection": "bestsellers",
         "products_to_show": 8,
-        "title": "Bestsellers",
+        "title": "Current favourites",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -150,14 +205,13 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 24,
-        "padding_bottom": 36
+        "padding_bottom": 44
       }
     },
-
     "how_its_made": {
       "type": "image-with-text",
       "blocks": {
@@ -171,15 +225,15 @@
         "him_text": {
           "type": "text",
           "settings": {
-            "text": "<p>We hand-make each piece in small batches, with premium materials and careful finishing. The higgledy piggledy part, no two are ever the same, and that’s the point.</p>",
+            "text": "<p>We craft in small batches with quality materials and careful finishing. The higgledy piggledy part: no two are exactly the same, and that is what makes each piece yours.</p>",
             "text_style": "body"
           }
         },
         "him_button": {
           "type": "button",
           "settings": {
-            "button_label": "Learn more",
-            "button_link": "shopify://pages/about",
+            "button_label": "View all products",
+            "button_link": "shopify://collections/all",
             "button_style_secondary": true
           }
         }
@@ -201,22 +255,20 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "scheme-2",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 8
       }
     },
-
     "email_capture": {
       "type": "newsletter",
       "settings": {
-        "heading": "Get early access to new drops",
-        "subheading": "Be first to see new Touchstones, Pebbos, earrings and upcoming candles and soaps.",
+        "heading": "Get first access to new drops",
+        "subheading": "Join for launch alerts, behind-the-scenes making updates, and occasional offers.",
         "color_scheme": "scheme-5",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 56
       }
     },
-
     "social_follow": {
       "type": "rich-text",
       "blocks": {
@@ -230,7 +282,7 @@
         "social_text": {
           "type": "text",
           "settings": {
-            "text": "<p>Behind the scenes, new makes, packaging, and satisfying finishing videos.</p><p><a href=\"https://instagram.com/\" target=\"_blank\" rel=\"noopener\">Instagram</a> and <a href=\"https://tiktok.com/\" target=\"_blank\" rel=\"noopener\">TikTok</a></p>",
+            "text": "<p>See new makes, packaging moments and studio snippets.</p><p><a href=\"https://www.instagram.com/properhiggledypiggledy/\" target=\"_blank\" rel=\"noopener\">Instagram</a> and <a href=\"https://www.tiktok.com/@proper.higgledy.p\" target=\"_blank\" rel=\"noopener\">TikTok</a></p>",
             "text_style": "body"
           }
         }
@@ -253,6 +305,7 @@
   "order": [
     "hero_image_banner",
     "hero_reassurance",
+    "brand_values",
     "shop_by_mood",
     "bestsellers",
     "how_its_made",

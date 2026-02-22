@@ -23,9 +23,21 @@
           "type": "title",
           "settings": {}
         },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 8,
+            "show_inventory_quantity": true
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -45,6 +57,24 @@
             "show_gift_card_recipient": true
           }
         },
+        "details_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Crafted details",
+            "icon": "leaf",
+            "content": "<p>Each piece is handmade in small batches, so slight variation is part of what makes it special.</p>",
+            "page": ""
+          }
+        },
+        "shipping_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping and gifting",
+            "icon": "truck",
+            "content": "<p>Most orders are dispatched same day or next working day. Perfect for gifting or an everyday ritual upgrade.</p>",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -54,17 +84,35 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pair it with",
+            "make_collapsible_row": false,
+            "icon": "heart",
+            "product_list_limit": 4,
+            "products_per_page": 2,
+            "pagination_style": "dots",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "rating",
         "price",
+        "inventory",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "details_tab",
+        "shipping_tab",
         "description",
-        "share"
+        "share",
+        "complementary"
       ],
       "settings": {
         "enable_sticky_info": true,
