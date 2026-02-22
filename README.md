@@ -34,7 +34,7 @@ Add these repo secrets:
 
 - `SHOPIFY_STORE` = `your-store.myshopify.com`
 - `SHOPIFY_STORE` = `proper-higgledy-piggledy.myshopify.com`
-- `SHOPIFY_CLI_THEME_TOKEN` = Theme Access password
+- `SHOPIFY_API_PASSWORD` = Theme Access password or Custom App Admin API access token
 - `SHOPIFY_STAGING_THEME_ID` = numeric ID for staging theme
 - `SHOPIFY_LIVE_THEME_ID` = numeric ID for live theme
 
@@ -73,4 +73,3 @@ Then:
 - Do not commit Shopify credentials or any token files.
 - Keep live-only edits disabled. Always edit through Git.
 - If needed, create a snapshot by duplicating the live theme in Shopify before large releases.
-

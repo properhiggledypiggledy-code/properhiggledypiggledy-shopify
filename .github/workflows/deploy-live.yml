@@ -23,13 +23,11 @@ jobs:
         run: npm install -g @shopify/cli@latest
 
       - name: Push to Shopify live theme
-        env:
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
         run: |
           shopify theme push \
+            --store "${{ secrets.SHOPIFY_STORE }}" \
+            --password "${{ secrets.SHOPIFY_API_PASSWORD }}" \
             --theme "${{ secrets.SHOPIFY_LIVE_THEME_ID }}" \
             --allow-live \
             --nodelete \
             --json
-
