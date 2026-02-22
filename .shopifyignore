@@ -1,0 +1,8 @@
+# Local or non-theme files
+.git/*
+.github/*
+.shopify/*
+README.md
+*.log
+.DS_Store
+

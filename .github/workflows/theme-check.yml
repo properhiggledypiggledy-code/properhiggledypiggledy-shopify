@@ -1,0 +1,26 @@
+name: Theme Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - release
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install theme-check
+        run: gem install theme-check
+
+      - name: Run theme-check
+        run: theme-check
+
